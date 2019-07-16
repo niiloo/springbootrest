@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="n.naderi" id="renameTable-aspectlogger">
+        <renameTable newTableName="Tracker"
+                     oldTableName="loging"
+                     schemaName="spring"/>
+    </changeSet>
+    <!--<modifyDataType columnName="client_id"-->
+    <!--newDataType="BIGINT"-->
+    <!--schemaName="public"-->
+    <!--tableName="person"/>-->
+    <changeSet author="n.naderi" id="renameColumn-tracker">
+        <renameColumn columnDataType="BIGINT"
+                      newColumnName="id"
+                      oldColumnName="client_id"
+                      type="BIGINT"
+                      primaykey="true"
+                      remarks="A String"
+                      schemaName="spring"
+                      tableName="Tracker"/>
+    </changeSet>
+
+    <changeSet author="n.naderi" id="addAutoIncrement-tracker">
+        <addAutoIncrement columnDataType="BIGINT"
+                          columnName="id"
+                          incrementBy="1"
+                          schemaName="spring"
+                          tableName="Tracker"/>
+    </changeSet>
+
+    <changeSet author="n.naderi" id="dropColumn-tracker">
+        <dropColumn columnName="type"
+                    schemaName="spring"
+                    tableName="Tracker"/>
+    </changeSet>
+
+    <changeSet author="n.naderi" id="renameColumn-student">
+        <renameColumn columnDataType="BIGINT"
+                      newColumnName="id"
+                      oldColumnName="client_id"
+                      type="BIGINT"
+                      autoIncrement="true"
+                      primaykey="true"
+                      remarks="A String"
+                      schemaName="spring"
+                      tableName="Student"/>
+    </changeSet>
+
+    <changeSet author="n.naderi" id="addAutoIncrement-Student">
+        <addAutoIncrement columnDataType="BIGINT"
+                          columnName="id"
+                          incrementBy="1"
+                          schemaName="spring"
+                          tableName="Student"/>
+    </changeSet>
+
+</databaseChangeLog>

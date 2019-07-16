@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DOCTYPE html-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <p:panel>
+        <p:panel styleClass="headerPanel noFooter" header="Student List">
+            <p:row>
+                <p:dataTable id="studentsTable" var="st" value="#{StudentReportBean.studentInformationList}"
+                             rowKey="#{st.merchantId}"
+                             paginator="true" rows="10"
+                             paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                             rowsPerPageTemplate="5,10,15" class="dataTable-contextMenu">
+
+                    <p:column headerText="ردیف" style="width: 60px;" >
+                        <h:outputText value="#{row + 1}" />
+                    </p:column>
+
+                    <p:column headerText="name" filterBy="#{st.firstName}" filterMatchMode="contains" style="width: 110px;">
+                        <h:outputText value="#{st.firstName}" />
+                    </p:column>
+
+                    <p:column headerText="family" filterBy="#{st.lastName}" style="width: 110px;" >
+                        <h:outputText value="#{st.lastName}" />
+                    </p:column>
+
+                </p:dataTable>
+            </p:row>
+        </p:panel>
+    </p:panel>
+</ui:composition>

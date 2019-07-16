@@ -1,0 +1,38 @@
+2019-07-13 11:37:19,918 INFO o.s.b.StartupInfoLogger [restartedMain] Starting SpringBootRestApplication on SOW-CMP-004 with PID 11276 (D:\MainProject\spring-boot-rest\target\classes started by N.Naderi in D:\MainProject\spring-boot-rest)
+2019-07-13 11:37:19,919 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-07-13 11:37:19,919 INFO o.s.b.SpringApplication [restartedMain] The following profiles are active: @spring.profiles.active@
+2019-07-13 11:37:20,517 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-13 11:37:20,528 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 10ms. Found 2 repository interfaces.
+2019-07-13 11:37:20,652 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$798d7529] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-13 11:37:21,226 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2019-07-13 11:37:21,297 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1373 ms
+2019-07-13 11:37:21,399 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2019-07-13 11:37:21,403 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2019-07-13 11:37:21,617 INFO l.l.c.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM spring.DATABASECHANGELOGLOCK
+2019-07-13 11:37:21,618 INFO l.l.c.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM spring.DATABASECHANGELOGLOCK
+2019-07-13 11:37:21,620 INFO l.l.c.Slf4jLogger [restartedMain] SELECT `LOCKED` FROM spring.DATABASECHANGELOGLOCK WHERE ID=1
+2019-07-13 11:37:21,628 INFO l.l.c.Slf4jLogger [restartedMain] Successfully acquired change log lock
+2019-07-13 11:37:21,679 INFO l.l.c.Slf4jLogger [restartedMain] SELECT MD5SUM FROM spring.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-07-13 11:37:21,681 INFO l.l.c.Slf4jLogger [restartedMain] SELECT COUNT(*) FROM spring.DATABASECHANGELOG
+2019-07-13 11:37:21,681 INFO l.l.c.Slf4jLogger [restartedMain] Reading from spring.DATABASECHANGELOG
+2019-07-13 11:37:21,682 INFO l.l.c.Slf4jLogger [restartedMain] SELECT * FROM spring.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-07-13 11:37:21,693 INFO l.l.c.Slf4jLogger [restartedMain] Successfully released change log lock
+2019-07-13 11:37:21,748 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-13 11:37:21,757 INFO o.h.d.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-13 11:37:21,810 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-13 11:37:22,192 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-13 11:37:22,310 INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-13 11:37:22,493 INFO o.s.s.c.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-13 11:37:22,538 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-07-13 11:37:22,798 INFO s.d.s.w.p.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2019-07-13 11:37:22,799 INFO s.d.s.w.p.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2019-07-13 11:37:22,816 INFO s.d.s.w.s.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2019-07-13 11:37:22,858 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2019-07-13 11:37:22,859 INFO o.s.b.StartupInfoLogger [restartedMain] Started SpringBootRestApplication in 3.074 seconds (JVM running for 198.907)
+2019-07-13 11:37:22,862 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2019-07-13 11:37:39,547 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-15] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-13 11:37:39,550 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-15] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-13 11:37:39,551 INFO c.z.h.HikariDataSource [Thread-15] HikariPool-2 - Shutdown initiated...
+2019-07-13 11:37:39,557 INFO c.z.h.HikariDataSource [Thread-15] HikariPool-2 - Shutdown completed.
